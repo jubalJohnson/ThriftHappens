@@ -2,9 +2,13 @@ import type { ClothingProduct } from "../data/data";
 
 interface ItemCardProps {
   product: ClothingProduct;
+  handleAdjustQuantity: (id: number, delta: number) => void;
 }
 
-export default function ItemCard({ product }: ItemCardProps) {
+export default function ItemCard({
+  product,
+  handleAdjustQuantity,
+}: ItemCardProps) {
   return (
     <div>
       <h3>{product.name}</h3>
@@ -16,6 +20,11 @@ export default function ItemCard({ product }: ItemCardProps) {
       <p>Size: {product.size}</p>
       <p>Price: {product.price.toFixed(2)}$</p>
       <p>Quantity: {product.quantity}</p>
+      <div>
+        <button onClick={() => handleAdjustQuantity(product.id, -1)}>-</button>
+        <span> {product.itemQuantity} </span>
+        <button onClick={() => handleAdjustQuantity(product.id, 1)}>+</button>
+      </div>
     </div>
   );
 }
