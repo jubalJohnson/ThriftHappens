@@ -12,7 +12,7 @@ export default function ItemCard({
   handleAddtoCheckout,
 }: ItemCardProps) {
   return (
-    <div>
+    <div className="ItemCard">
       <h3>{product.name}</h3>
       <img src={product.image} alt={product.name} width={150} />
       <p>Fit: {product.fit}</p>

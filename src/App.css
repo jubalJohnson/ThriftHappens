@@ -167,7 +167,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -4.5px;
     border: 5px solid transparent;
@@ -181,4 +181,47 @@
     right: 0;
     border-right-color: var(--border);
   }
+}
+
+.ThriftHappens {
+  /*border: 2px green solid;*/
+  display: flex;
+  flex-direction: column;
+}
+.NavBar {
+  width: 100%;
+  /*border: 2px green solid;*/
+}
+.ProductsCheckout {
+  display: flex;
+}
+.ItemsContainer {
+  /*border: 2px red solid;*/
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 3px 3px;
+  padding: 5px;
+}
+.ItemCard {
+  width: 30%;
+  border: 1px grey solid;
+  border-radius: 5px;
+  margin: 3px 3px;
+  padding: 10px;
+}
+.CheckoutContainer {
+  border: 2px grey solid;
+  border-radius: 5px;
+  width: 15%;
+  margin: 3px 3px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.CheckoutCard {
+  border: 1px grey solid;
+  border-radius: 5px;
+  margin: 6px 3px;
+  padding: 10px;
 }

@@ -13,8 +13,9 @@ export default function CheckoutContainer({
   handleEmptyCheckout,
 }: CheckoutContainerProps) {
   return (
-    <div>
-      <h2>Checkout</h2>
+    <div className="CheckoutContainer">
+      <h2>Cart</h2>
+      <br />
       {/*Display checkout card for items in checkout*/}
       {cartItems.map((cartItem) => (
         <CheckoutCard
@@ -24,13 +25,15 @@ export default function CheckoutContainer({
         />
       ))}
       {/*Button for emptying the cart and adding quantity in checkout back to available stock */}
-      <button onClick={handleEmptyCheckout}>Empty Checkout</button>
+      <button onClick={handleEmptyCheckout} disabled={cartItems.length === 0}>
+        Empty Checkout
+      </button>
       {/*reduce() used for finding cart total, if cart is empty "cart empty displayed"*/}
-      <h2>
+      <h3>
         {cartItems.length > 0
           ? `Total: ${cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)}$`
           : "Cart Empty"}
-      </h2>
+      </h3>
     </div>
   );
 }

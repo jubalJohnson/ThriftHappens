@@ -10,7 +10,7 @@ export default function CheckoutCard({
   handleRemoveFromCheckout,
 }: CheckoutCardProps) {
   return (
-    <div>
+    <div className="CheckoutCard">
       <img src={cartItem.image} alt={cartItem.name} width={100} />
       <h3>{cartItem.name}</h3>
       <p>Price: {cartItem.price.toFixed(2)}$</p>

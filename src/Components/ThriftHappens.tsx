@@ -91,18 +91,20 @@ export default function ThriftHappens({ data }: ThriftHappensProps) {
   }
 
   return (
-    <div>
+    <div className="ThriftHappens">
       <NavBar />
-      <ItemsContainer
-        products={productInfo}
-        handleAdjustQuantity={handleAdjustQuantity}
-        handleAddtoCheckout={handleAddtoCheckout}
-      />
-      <CheckoutContainer
-        cartItems={cartItems}
-        handleRemoveFromCheckout={handleRemoveFromCheckout}
-        handleEmptyCheckout={handleEmptyCheckout}
-      />
+      <div className="ProductsCheckout">
+        <ItemsContainer
+          products={productInfo}
+          handleAdjustQuantity={handleAdjustQuantity}
+          handleAddtoCheckout={handleAddtoCheckout}
+        />
+        <CheckoutContainer
+          cartItems={cartItems}
+          handleRemoveFromCheckout={handleRemoveFromCheckout}
+          handleEmptyCheckout={handleEmptyCheckout}
+        />
+      </div>
     </div>
   );
 }

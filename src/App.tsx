@@ -1,3 +1,4 @@
+import "./App.css";
 import { products } from "./data/data";
 import ThriftHappens from "./Components/ThriftHappens";
 //Main app component

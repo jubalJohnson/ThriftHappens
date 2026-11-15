@@ -13,7 +13,7 @@ export default function ItemsContainer({
   handleAddtoCheckout,
 }: ItemsContainerProps) {
   return (
-    <div>
+    <div className="ItemsContainer">
       {
         //Display an item card for each product by providing neccesary informations
         products.map((product) => (
