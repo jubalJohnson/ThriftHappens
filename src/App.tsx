@@ -1,6 +1,6 @@
 import { products } from "./data/data";
 import ThriftHappens from "./Components/ThriftHappens";
-
+//Main app component
 function App() {
   return (
     <div>
